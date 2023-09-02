@@ -22,21 +22,21 @@ namespace Stockfish_GUI.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        public Resources() {
+        internal Resources() {
         }
         
         /// <summary>
         ///   이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Stockfish_GUI.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Stockfish_GUI.Properties {
         ///   재정의합니다.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_advisor {
+        internal static System.Drawing.Bitmap blue_advisor {
             get {
                 object obj = ResourceManager.GetObject("blue_advisor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_cannon {
+        internal static System.Drawing.Bitmap blue_cannon {
             get {
                 object obj = ResourceManager.GetObject("blue_cannon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_chariot {
+        internal static System.Drawing.Bitmap blue_chariot {
             get {
                 object obj = ResourceManager.GetObject("blue_chariot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_elephant {
+        internal static System.Drawing.Bitmap blue_elephant {
             get {
                 object obj = ResourceManager.GetObject("blue_elephant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +103,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_horse {
+        internal static System.Drawing.Bitmap blue_horse {
             get {
                 object obj = ResourceManager.GetObject("blue_horse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_king {
+        internal static System.Drawing.Bitmap blue_king {
             get {
                 object obj = ResourceManager.GetObject("blue_king", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap blue_pawn {
+        internal static System.Drawing.Bitmap blue_pawn {
             get {
                 object obj = ResourceManager.GetObject("blue_pawn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap board {
+        internal static System.Drawing.Bitmap board {
             get {
                 object obj = ResourceManager.GetObject("board", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream capture {
+        internal static System.IO.UnmanagedMemoryStream capture {
             get {
                 return ResourceManager.GetStream("capture", resourceCulture);
             }
@@ -152,7 +152,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream move {
+        internal static System.IO.UnmanagedMemoryStream move {
             get {
                 return ResourceManager.GetStream("move", resourceCulture);
             }
@@ -161,7 +161,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_advisor {
+        internal static System.Drawing.Bitmap red_advisor {
             get {
                 object obj = ResourceManager.GetObject("red_advisor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -171,7 +171,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_cannon {
+        internal static System.Drawing.Bitmap red_cannon {
             get {
                 object obj = ResourceManager.GetObject("red_cannon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -181,7 +181,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_chariot {
+        internal static System.Drawing.Bitmap red_chariot {
             get {
                 object obj = ResourceManager.GetObject("red_chariot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -191,7 +191,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_elephant {
+        internal static System.Drawing.Bitmap red_elephant {
             get {
                 object obj = ResourceManager.GetObject("red_elephant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -201,7 +201,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_horse {
+        internal static System.Drawing.Bitmap red_horse {
             get {
                 object obj = ResourceManager.GetObject("red_horse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -211,7 +211,7 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_king {
+        internal static System.Drawing.Bitmap red_king {
             get {
                 object obj = ResourceManager.GetObject("red_king", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -221,9 +221,179 @@ namespace Stockfish_GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        public static System.Drawing.Bitmap red_pawn {
+        internal static System.Drawing.Bitmap red_pawn {
             get {
                 object obj = ResourceManager.GetObject("red_pawn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_advisor {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_advisor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_cannon {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_cannon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_chariot {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_chariot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_elephant {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_elephant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_horse {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_horse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_king {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_king", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_king_small {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_king_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_blue_pawn {
+            get {
+                object obj = ResourceManager.GetObject("template_blue_pawn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_advisor {
+            get {
+                object obj = ResourceManager.GetObject("template_red_advisor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_cannon {
+            get {
+                object obj = ResourceManager.GetObject("template_red_cannon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_chariot {
+            get {
+                object obj = ResourceManager.GetObject("template_red_chariot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_elephant {
+            get {
+                object obj = ResourceManager.GetObject("template_red_elephant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_horse {
+            get {
+                object obj = ResourceManager.GetObject("template_red_horse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_king {
+            get {
+                object obj = ResourceManager.GetObject("template_red_king", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_king_small {
+            get {
+                object obj = ResourceManager.GetObject("template_red_king_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_red_pawn {
+            get {
+                object obj = ResourceManager.GetObject("template_red_pawn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_turn_grayscale {
+            get {
+                object obj = ResourceManager.GetObject("template_turn_grayscale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

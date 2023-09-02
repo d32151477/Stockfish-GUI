@@ -37,7 +37,8 @@ namespace Stockfish_GUI
 
         public static Form Form;
         public static Process Process;
-        public static IReadOnlyList<Setting> Settings; 
+        public static IReadOnlyList<Setting> Settings;
+        public static Setting CurrentSetting;
 
         public static AutoResetEvent EventStop = new(false);
         public static AutoResetEvent EventReady = new(false);
@@ -72,6 +73,7 @@ namespace Stockfish_GUI
         }
         public static void SetOptions(Setting setting)
         {
+            CurrentSetting = setting;
             if (PVInfos is not null)
                 lock (PVInfos)
                     PVInfos = new PVInfo[setting.MultiPV];
@@ -193,11 +195,24 @@ namespace Stockfish_GUI
             @event.WaitOne(mileseconds);
         }
 
-        public static void Go() => Write("go infinite");
-        public static void Go(int mileseconds) => Write($"go movetime {mileseconds}");
+        public static void Go()
+        {
+            EventStop.Reset();
+            Write("go infinite");
+        }
+        public static void GoDepth(int depth)
+        {
+            EventStop.Reset();
+            Write($"go depth {depth}");
+        }
+        public static void Go(int mileseconds)
+        {
+            EventStop.Reset();
+            Write($"go movetime {mileseconds}");
+        }
         public static void SetOption(string name, string value) => Write($"setoption name {name} value {value}");
         public static void Position(string fen) => Write($"position fen {fen}");
-        public static void Stop() { EventStop.Reset(); Write("stop"); }
+        public static void Stop() => Write("stop");
         public static void IsReady() { EventReady.Reset(); Write("isready"); }
         public static void UCI() { EventUCI.Reset(); Write("uci"); }
 
@@ -245,7 +260,10 @@ namespace Stockfish_GUI
             public bool TsumeMode = false;
             public string VariantPath = "<empty>";
 
-            private const string kFolderPath = "./Settings/";
+            public int Search_Depth { get; set; }
+
+            public const string kFolderPath = "./Settings/";
+            public const string kDefaultFileName = "DefaultSettings.ini";
 
             public static IReadOnlyList<Setting> Load()
             {
@@ -257,8 +275,8 @@ namespace Stockfish_GUI
 
                 if (files.Length == 0)
                 {
-                    var setting = new Setting() { Name = "DefaultSettings.ini" };
-                    File.AppendAllText(Path.Combine(kFolderPath, "DefaultSettings.ini"), JsonConvert.SerializeObject(setting, Formatting.Indented));
+                    var setting = new Setting() { Name = kDefaultFileName };
+                    File.AppendAllText(Path.Combine(kFolderPath, kDefaultFileName), JsonConvert.SerializeObject(setting, Formatting.Indented));
                     settings.Add(setting);
                 }
                 else

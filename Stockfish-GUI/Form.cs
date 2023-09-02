@@ -146,21 +146,29 @@ namespace Stockfish_GUI
         }
         private void InitCoreSettings()
         {
-            foreach (var setting in Core.Settings)
+            int index = 0;
+            for (int i = 0; i < Core.Settings.Count; i++)
+            {
+                var setting = Core.Settings[i];
+                if (Settings.CoreSettingPath == setting.Name)
+                    index = i;
+
                 SettingsComboBox.Items.Add(setting.Name);
-            SettingsComboBox.SelectedIndex = 0;
+            }
+            SettingsComboBox.SelectedIndex = index;
         }
         private void SetCoreSetting(int index)
         {
             var running = Board.Running;
             var setting = Core.Settings[index];
+            Settings.CoreSettingPath = setting.Name;
             SettingsComboBox.SelectedIndex = index;
             Text = $"{Title} ({setting.Name})";
 
             if (running)
                 Board.Pause();
-
             Core.SetOptions(setting);
+            Core.Write("ucinewgame");
             Core.IsReady();
             Core.Wait(Core.EventReady, seconds: 5);
             PVInfos = new PVInfo[Core.PVInfos.Length];
@@ -216,26 +224,14 @@ namespace Stockfish_GUI
             Board.CurrentArrowIndex = -1;
             BoardView.Invalidate();
         }
-        private void Input_TextChanged(object sender, EventArgs e)
-        {
-            if (Input.Text.StartsWith("> "))
-                return;
-            if (Input.Text.StartsWith(">"))
-                Input.Text = $"> {Input.Text.Substring(1)}";
-            else
-                Input.Text = $"> {Input.Text}";
-            Input.SelectionStart = Input.Text.Length;
-        }
 
         private void Input_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                const int kInputPrefixLength = 2;
-                var command = Input.Text.Substring(kInputPrefixLength);
-                Core.Write(command);
-
+                Core.Write(Input.Text);
                 Input.Text = string.Empty;
+                Console.ScrollToCaret();
             }
         }
 
@@ -351,6 +347,7 @@ namespace Stockfish_GUI
             public bool ShowConsole = true;
             public bool ShowPVView = true;
             public bool ShowPVStatus = true;
+            public string CoreSettingPath = Core.Setting.kDefaultFileName;
 
             public const string kPath = "./Form.ini";
 

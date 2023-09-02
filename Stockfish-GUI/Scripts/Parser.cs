@@ -1,10 +1,12 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Extensions;
+using Stockfish_GUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Resources;
 using System.Runtime.InteropServices;
 
 namespace Stockfish_GUI
@@ -74,7 +76,8 @@ namespace Stockfish_GUI
             Tracer.Enabled = true;
             Tracer.Tick += (sender, e) => Trace();
 
-            TemplateTurn = Cv2.ImRead("./Templates/turn.grayscale.png", ImreadModes.Grayscale);
+            using var mat = Resources.template_turn_grayscale.ToMat();
+            TemplateTurn = mat.CvtColor(ColorConversionCodes.BGR2GRAY);
         }
 
         public static void Execute()
@@ -229,12 +232,13 @@ namespace Stockfish_GUI
             if (TemplateInfos == null)
             {
                 TemplateInfos = new List<PieceTemplateInfo>();
-                var files = Directory.GetFiles("./Templates/Pieces/", "*.png", SearchOption.TopDirectoryOnly);
-                foreach (var file in files)
+
+                var resourceManager = Resources.ResourceManager;
+                foreach (var name in PieceTypesByName.Keys)
                 {
-                    var name = Path.GetFileNameWithoutExtension(file);
+                    var bitmap = resourceManager.GetObject($"template_{name}") as Bitmap;
                     var color = name.StartsWith("red") ? Color.Red : Color.Blue;
-                    var mat = Cv2.ImRead(file, ImreadModes.Unchanged);
+                    var mat = bitmap.ToMat();
 
                     TemplateInfos.Add(new PieceTemplateInfo()
                     {

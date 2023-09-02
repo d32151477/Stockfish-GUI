@@ -169,4 +169,55 @@
   <data name="red_pawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pieces\red_pawn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="template_blue_advisor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_advisor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_cannon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_cannon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_chariot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_chariot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_elephant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_elephant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_horse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_horse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_king" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_king.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_king_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_king_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_blue_pawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_blue_pawn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_advisor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_advisor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_cannon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_cannon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_chariot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_chariot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_elephant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_elephant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_horse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_horse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_king" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_king.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_king_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_king_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_red_pawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pieces\Templates\template_red_pawn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="template_turn_grayscale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\template_turn_grayscale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

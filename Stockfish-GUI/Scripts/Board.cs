@@ -717,7 +717,11 @@ namespace Stockfish_GUI
                     return;
 
                 Core.Position(GetFen());
-                Core.Go();
+                if (Core.CurrentSetting.Search_Depth > 0)
+                    Core.GoDepth(Core.CurrentSetting.Search_Depth);
+                else
+                    Core.Go();
+
                 Form.Resume();
                 Running = true;
             }
