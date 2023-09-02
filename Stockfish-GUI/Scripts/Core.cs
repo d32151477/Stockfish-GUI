@@ -52,6 +52,9 @@ namespace Stockfish_GUI
         }
         public static void Start()
         {
+            if (!File.Exists(kEnginePath))
+                throw new Exception($"해당 위치({kEnginePath})에서 엔진 파일을 찾을 수 없습니다.");
+
             var processInfo = new ProcessStartInfo
             {
                 FileName = kEnginePath,
