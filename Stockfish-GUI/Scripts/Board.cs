@@ -20,7 +20,9 @@ namespace Stockfish_GUI
 
         private const int kSpotDiameter = 16;
 
-        public const string kFen = "rbna1abnr/4k4/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/4K4/RNBA1ANBR w - - 0 1";
+        public const string kFen = "rbna1abnr/4k4/1c5c1/p1p1p1p1p/9/PPPPPPPPP/PPPPPPPPP/PPPPPPPPP/PPP1K1PPP/3A1A3 w - - 0 1";
+
+        //public const string kFen = "rbna1abnr/4k4/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/4K4/RNBA1ANBR w - - 0 1";
 
         private const int kArrowWidth = 16;
         private static readonly Color[] s_ArrowColors = new[] { Color.Orange, Color.DarkSlateBlue, };
@@ -89,6 +91,7 @@ namespace Stockfish_GUI
         }
         public struct Movement
         {
+            public int Time;
             public Piece Piece;
             public Piece Captured;
             public Point From;
@@ -573,15 +576,19 @@ namespace Stockfish_GUI
 
         public void MoveTo(Point from, Point to, bool animate)
         {
+            var captured = this[to] is Piece piece ? piece : null;
+            var time = captured is null ? Time + 1 : 1;
+
             var movement = new Movement()
             {
+                Time = time,
                 From = from,
                 To = to,
-
                 Piece = this[from],
-                Captured = this[to] is Piece captured ? captured : null,
+                Captured = this[to],
                 Footprints = new(Footprints),
             };
+
             int length = Movements.Count - UndoIndex;
             int index = Movements.Count - length;
 
@@ -611,7 +618,9 @@ namespace Stockfish_GUI
                     Sounds.Capture.Play();
                 }
                 else
+                {
                     Sounds.Move.Play();
+                }
 
                 this[to] = movement.Piece;
                 this[from] = null;
@@ -619,7 +628,7 @@ namespace Stockfish_GUI
                 movement.Piece.Point = to;
             }
 
-            Time += 1;
+            Time = movement.Time;
             UndoIndex += 1;
 
             Form.TimeBar.Maximum = Movements.Count;
@@ -658,7 +667,7 @@ namespace Stockfish_GUI
                 movement.Piece.Point = from;
             }
 
-            Time -= 1;
+            Time = movement.Time;
             UndoIndex -= 1;
 
             Switch();
