@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2D3F6E6B-50A1-4E6E-8F65-3342098A4427}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Stockfish_GUI</RootNamespace>
     <AssemblyName>Stockfish-GUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
