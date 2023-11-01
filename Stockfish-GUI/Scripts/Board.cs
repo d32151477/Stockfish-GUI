@@ -20,9 +20,7 @@ namespace Stockfish_GUI
 
         private const int kSpotDiameter = 16;
 
-        public const string kFen = "rbna1abnr/4k4/1c5c1/p1p1p1p1p/9/PPPPPPPPP/PPPPPPPPP/PPPPPPPPP/PPP1K1PPP/3A1A3 w - - 0 1";
-
-        //public const string kFen = "rbna1abnr/4k4/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/4K4/RNBA1ANBR w - - 0 1";
+        public const string kFen = "rbna1abnr/4k4/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/4K4/RNBA1ANBR w - - 0 1";
 
         private const int kArrowWidth = 16;
         private static readonly Color[] s_ArrowColors = new[] { Color.Orange, Color.DarkSlateBlue, };
