@@ -202,7 +202,7 @@ namespace Stockfish_GUI
                 using var mat = Capture();
 
                 BoardArea = GetBoardArea(mat);
-                if (BoardArea == OpenCvSharp.Rect.Empty)
+                if (BoardArea == default)
                     return false;
 
                 using var board = mat[BoardArea];
@@ -545,8 +545,8 @@ namespace Stockfish_GUI
         // 블루스택 핸들을 가져옵니다.
         private static IntPtr GetHandle()
         {
-            var parent = FindWindow("Qt5154QWindowOwnDCIcon", "BlueStacks App Player");
-            var child = FindWindowEx(parent, 0, "Qt5154QWindowIcon", "HD-Player");
+            var parent = FindWindow("Qt654QWindowIcon", "BlueStacks");
+            var child = FindWindowEx(parent, 0, "Qt654QWindowIcon", "HD-Player");
 
             return child;
         }
@@ -582,7 +582,7 @@ namespace Stockfish_GUI
                 if (ptr.At(0, i) > 5)
                     return new Rect(0, i, mat.Width, mat.Width);
 
-            return Rect.Empty;
+            return default;
         }
 
         private static Rect GetStatusArea(Mat mat, Rect boardArea)
