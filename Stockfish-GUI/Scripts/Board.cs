@@ -89,7 +89,7 @@ namespace Stockfish_GUI
         }
         public struct Movement
         {
-            public int Time;
+            public int Retry;
             public Piece Piece;
             public Piece Captured;
             public Point From;
@@ -575,11 +575,11 @@ namespace Stockfish_GUI
         public void MoveTo(Point from, Point to, bool animate)
         {
             var captured = this[to] is Piece piece ? piece : null;
-            var time = captured is null ? Time + 1 : 1;
+            var retry = captured is null ? Retry + 1 : 0;
 
             var movement = new Movement()
             {
-                Time = time,
+                Retry = retry,
                 From = from,
                 To = to,
                 Piece = this[from],
@@ -626,7 +626,9 @@ namespace Stockfish_GUI
                 movement.Piece.Point = to;
             }
 
-            Time = movement.Time;
+            Time += 1;
+            Retry = movement.Retry;
+
             UndoIndex += 1;
 
             Form.TimeBar.Maximum = Movements.Count;
@@ -665,7 +667,9 @@ namespace Stockfish_GUI
                 movement.Piece.Point = from;
             }
 
-            Time = movement.Time;
+            Time -= 1;
+            Retry = movement.Retry;
+
             UndoIndex -= 1;
 
             Switch();
