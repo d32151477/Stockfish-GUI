@@ -545,8 +545,8 @@ namespace Stockfish_GUI
         // 블루스택 핸들을 가져옵니다.
         private static IntPtr GetHandle()
         {
-            var parent = FindWindow("Qt654QWindowIcon", "BlueStacks");
-            var child = FindWindowEx(parent, 0, "Qt654QWindowIcon", "HD-Player");
+            var parent = FindWindow("Qt672QWindowIcon", "BlueStacks App Player");
+            var child = FindWindowEx(parent, 0, "Qt672QWindowIcon", "HD-Player");
 
             return child;
         }
